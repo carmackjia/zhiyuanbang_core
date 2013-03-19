@@ -143,3 +143,58 @@ GET /j/school/[idSchool]
          * url:  链接地址
          * content: 词条内容
          * summary: 词条汇总
+
+
+GET /j/school/[idSchool]/history
+----------------------------------
+
+* fields: 
+
+  * 创建
+        
+      * type: 创建
+      * create_time: 创建时间 
+      * create_name: 创建名称
+
+  * 升格
+
+      * type: 升格
+      * time: 时间
+      * from_name: 之前的名称
+      * to_name: 新改过的名字
+
+  * 合并组建
+
+     * type: 合并组建
+     * time: 时间
+     * cooperator: 共建者列表
+     * old_name: 老名称
+     * new_name: 新名称 
+
+  * 改建
+
+     * type: 改建
+     * time: 时间
+     * cooperator: 共建者列表
+     * old_name: 老名称
+     * new_name: 新名称
+
+  * 并入
+
+     * type: 并入
+     * time: 时间
+     * mergeList:
+
+       * fields:
+
+        * school: xxxx 院校
+        * major:  xxxx 专业列表
+
+     * new_name: 新名称 
+
+  * 更名
+
+     * type: 更名
+     * time: 时间
+     * from_name: 老名称
+     * to_name: 新名称     
